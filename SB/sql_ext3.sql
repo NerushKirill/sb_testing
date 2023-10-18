@@ -50,14 +50,9 @@ SELECT * FROM sales;
 
 SELECT
   people.name,
-  count(sales.sale) as 'sale_count',
-  ROW_NUMBER() OVER(ORDER BY people.name desc) as 'sale_rank'
-FROM
-  people
-LEFT JOIN
-  sales ON people.id = sales.people_id
-GROUP BY
-  people.name
-ORDER BY
-  'sale_count' desc;
-
+  count(sales.sale) AS 'sale_count',
+  ROW_NUMBER() OVER(ORDER BY people.name DESC) AS 'sale_rank'
+FROM people
+LEFT JOIN sales ON people.id = sales.people_id
+GROUP BY people.name
+ORDER BY 'sale_count' DESC;
