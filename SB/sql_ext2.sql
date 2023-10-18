@@ -34,5 +34,4 @@ SELECT
   SUBSTRING_INDEX(SUBSTRING_INDEX(name, ' ', 2), ' ', -1) as имя,
   SUBSTRING_INDEX(name, ' ', 1) as фамилия,
   SUBSTRING_INDEX(name, ' ', -1) as отчество
-FROM
-  people;
+FROM people;
