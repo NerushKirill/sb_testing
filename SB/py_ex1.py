@@ -2,6 +2,7 @@
 
 
 class Predictor:
+
     def __init__(self):
         self.__example_train_set = [
             (0, 1),
@@ -10,9 +11,6 @@ class Predictor:
             (9, 8),
             (3, 5)
         ]
-
-    def __str__(self):
-        return 'example_train_set: %s' % self.__example_train_set
 
     @staticmethod
     def _mean(values):
@@ -44,6 +42,9 @@ class Predictor:
         except TypeError:
             print('\033[41mERROR: %s' % TypeError)
             return 'Error'
+
+    def __str__(self):
+        return 'example_train_set: %s' % self.__example_train_set
 
 
 def main():
